@@ -58,8 +58,8 @@ tokenizer.save_pretrained("./trained_model")
 
 
 def generate_follow_up(question, answer):
-    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    device = torch.device("cuda")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # device = torch.device("cuda")
 
     model.to(device)
     input_text = question + "<SEP>" + answer
